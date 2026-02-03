@@ -1,0 +1,15 @@
+<article class="card {{ kind }} reveal">
+  <div class="card-top">
+    <div class="avatar {{ avatarClass }}" aria-hidden="true"></div>
+
+    <div class="meta">
+      <h2 class="card-title">{{ name }}</h2>
+
+      {% if kind == "sun" %}
+        <p class="card-line"><span class="label">Type:</span> {{ type }}</p>
+      {% else %}
+        <p class="card-line"><span class="label">AU:</span> {{ au }}</p>
+      {% endif %}
+    </div>
+  </div>
+</article>
