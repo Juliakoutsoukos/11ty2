@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Only enable the "hidden until revealed" behavior if ScrollReveal exists
   if (!window.ScrollReveal) return;
+
+  document.documentElement.classList.add("sr");
 
   ScrollReveal().reveal(".reveal", {
     distance: "18px",

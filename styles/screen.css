@@ -180,4 +180,9 @@ body {
 }
 
 /* Prevent flash before ScrollReveal */
-.reveal { opacity: 0; }
+/* Cards should be visible by default */
+.reveal { opacity: 1; }
+
+/* Only hide them when ScrollReveal is actually running */
+html.sr .reveal { opacity: 0; }
+
