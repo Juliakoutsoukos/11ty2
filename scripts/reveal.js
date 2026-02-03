@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (!window.ScrollReveal) return;
 
-  // Only after ScrollReveal exists, mark page as using it.
-  document.documentElement.classList.add("sr");
-
   ScrollReveal().reveal(".reveal", {
     distance: "18px",
     origin: "bottom",
