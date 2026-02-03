@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Only enable the "hidden until revealed" behavior if ScrollReveal exists
   if (!window.ScrollReveal) return;
 
+  // Mark the page as using ScrollReveal
   document.documentElement.classList.add("sr");
 
   ScrollReveal().reveal(".reveal", {
