@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (!window.ScrollReveal) return;
 
-  // Mark the page as using ScrollReveal
   document.documentElement.classList.add("sr");
 
   ScrollReveal().reveal(".reveal", {
