@@ -182,13 +182,11 @@ body {
 /* Prevent flash before ScrollReveal */
 /* Cards should be visible by default */
 /* Visible by default */
-.reveal {
-  opacity: 1;
-}
+/* Visible by default */
+.reveal { opacity: 1; }
 
 /* Only hide when ScrollReveal is active */
-html.sr .reveal {
-  opacity: 0;
-}
-.card { display: block !important; opacity: 1 !important; }
+html.sr .reveal { opacity: 0; }
+
+
 
