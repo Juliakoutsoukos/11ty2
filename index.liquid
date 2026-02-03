@@ -3,10 +3,36 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<main x-data="nameGenerator()">
-  <h1 x-text="currentName"></h1>
+<section class="deck-header">
+  <h1>Planetary Playing Cards</h1>
+  <p>A CSS-only solar system deck using 11ty, Grid, and ScrollReveal.</p>
+</section>
 
-  <button type="button" @click="generate()">
-    Generate Random Name
-  </button>
-</main>
+<section class="grid">
+
+  {%- comment -%} Sun Card {%- endcomment -%}
+  {% include "card.liquid",
+    kind: "sun",
+    name: sun.name,
+    type: sun.type,
+    avatarClass: sun.class
+  %}
+
+  {%- comment -%} Planet Cards {%- endcomment -%}
+  {% for p in planets %}
+    {% include "card.liquid",
+      kind: "planet",
+      name: p.name,
+      au: p.au,
+      avatarClass: p.class
+    %}
+  {% endfor %}
+
+  {%- comment -%} Optional star cards (add more if wireframe shows them) {%- endcomment -%}
+  <article class="card star reveal">
+    <div class="starburst" aria-hidden="true"></div>
+    <h2 class="card-title">Star</h2>
+    <p class="card-line"><span class="label">Class:</span> Main Sequence</p>
+  </article>
+
+</section>
