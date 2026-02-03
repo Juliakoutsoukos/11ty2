@@ -1,6 +1,8 @@
+<pre>{{ planets | jsonify }}</pre>
+
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Planetary Playing Cards
 ---
 
 <section class="deck-header">
@@ -10,16 +12,14 @@ title: 11ty Boilerplate
 
 <section class="grid">
 
-  {%- comment -%} Sun Card {%- endcomment -%}
   {% include "card.liquid",
     kind: "sun",
-    name: sun.name,
-    type: sun.type,
-    avatarClass: sun.class
+    name: planets.sun.name,
+    type: planets.sun.type,
+    avatarClass: planets.sun.class
   %}
 
-  {%- comment -%} Planet Cards {%- endcomment -%}
-  {% for p in planets %}
+  {% for p in planets.planets %}
     {% include "card.liquid",
       kind: "planet",
       name: p.name,
@@ -28,7 +28,6 @@ title: 11ty Boilerplate
     %}
   {% endfor %}
 
-  {%- comment -%} Optional star cards (add more if wireframe shows them) {%- endcomment -%}
   <article class="card star reveal">
     <div class="starburst" aria-hidden="true"></div>
     <h2 class="card-title">Star</h2>
